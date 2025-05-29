@@ -18,6 +18,9 @@ dependencies:
   path: ^1.9.0
   yaml: ^3.1.2
   yaml_edit: ^2.1.1
+  system_info: ^1.0.1
+  dart_console: ^1.2.0
+  encrypt: ^5.0.3
 
 dev_dependencies:
   # flutter pub run build_runner build

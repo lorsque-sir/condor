@@ -19,6 +19,11 @@ abstract class CondorCommand extends Command<int> {
     return results.wasParsed(option) ? results[option] as String : '';
   }
 
+  /// 获取布尔类型 option 的值
+  bool boolOption(String option) {
+    return results.wasParsed(option) ? results[option] as bool : false;
+  }
+
   /// 输出成功信息
   void logSuccess() {
     Log.success('🥳 大功告成 - $name');
