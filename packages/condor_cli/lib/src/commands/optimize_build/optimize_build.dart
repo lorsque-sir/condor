@@ -248,20 +248,20 @@ class OptimizeBuildCommand extends CondorCommand {
       'Podfile.lock',
     );
 
-    final mainfestPath = path.join(
+    final manifestPath = path.join(
       iosPath,
       'Pods',
       'Manifest.lock',
     );
 
     // 确保目标目录存在
-    final manifestDir = Directory(path.dirname(mainfestPath));
+    final manifestDir = Directory(path.dirname(manifestPath));
     if (!manifestDir.existsSync()) {
       manifestDir.createSync(recursive: true);
     }
 
     // 复制文件，如果目标文件存在则覆盖
-    File(podfileLockPath).copySync(mainfestPath);
+    File(podfileLockPath).copySync(manifestPath);
   }
 }
 
